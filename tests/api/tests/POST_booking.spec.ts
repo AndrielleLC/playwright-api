@@ -9,7 +9,7 @@ test.describe.parallel("API TESTING - PLAYWRIGHT", () => {
     const responseJson = await response.json();
 
     expect(response.ok()).toBeTruthy();
-    expect(response.status()).toBe(400);
+    expect(response.status()).toBe(200);
     expect(responseJson.booking).toHaveProperty("firstname", "Jim");
     expect(responseJson.booking).toHaveProperty("lastname", "Brown");
     expect(responseJson.booking).toHaveProperty("totalprice", 111);
