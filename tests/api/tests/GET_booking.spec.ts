@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test';
 import { getRequest, getRequest1, getRequestParam } from '../requests/GET_booking.request';
 
-test.describe.parallel("API TESTING - POST", () => {
+test.describe.parallel("API TESTING - GET", () => {
 test('Should be get all the booking details', async ({ request }) => {
     const response = await getRequest({ request });
     //console.log(await response.json());
