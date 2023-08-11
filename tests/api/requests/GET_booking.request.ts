@@ -14,7 +14,7 @@ interface IGetRequest1 {
   }
   
 function getRequest1({ request }: IGetRequest1) {
-    return request.get(`/booking/1`);
+    return request.get(`/booking/2`);
   }
 
   interface IGetRequestParam {
