@@ -1,5 +1,5 @@
 import { APIRequestContext } from "playwright";
-import * as bookingDetails from "../payloads/POSTBooking.json";
+import * as bookingGet from "../payloads/GETBooking.json";
 
 interface IGetRequest {
   request: APIRequestContext;
@@ -23,9 +23,7 @@ function getRequest1({ request }: IGetRequest1) {
   
 function getRequestParam({ request }: IGetRequestParam) {
     return request.get(`/booking`,{
-        params: {
-            firstname: "Mary",
-            },
+        params: bookingGet,
     });
   }
 
