@@ -48,7 +48,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
           SLACK_CHANNEL: pw-automation-tests
           SLACK_COLLOR: ${{ job.status }}
-          SLACK_ICON: https://www.imagensempng.com.br/wp-content/uploads/2021/03/Vermelho-x-ilustracao-Erro-Png-1024x1024.png?size=48
+          SLACK_ICON: https://cdn-icons-png.flaticon.com/512/148/148766.png?size=48
           SLACK_MESSAGE: 'FAIL! :fire:'
           SLACK_TITLE: 'SOMETHING WENT WRONG! :fire:'
           SLACK_USERNAME: FAIL - REGRESSIVE TESTS      
