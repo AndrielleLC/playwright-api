@@ -36,9 +36,9 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
           SLACK_CHANNEL: pw-automation-tests
           SLACK_COLLOR: ${{ job.status }}
-          SLACK_ICON: https://e7.pngegg.com/pngimages/61/684/png-clipart-check-check-mark-logo-villa-check-miscellaneous-angle.png
+          SLACK_ICON: https://e7.pngegg.com/pngimages/61/684/png-clipart-check-check-mark-logo-villa-check-miscellaneous-angle.png?size=48
           SLACK_MESSAGE: 'SUCCESS! :white_check_mark:'
-          SLACK_TITLE: 'TEST RUN SUCCESSFULLY! :white_check_mark:'
+          SLACK_TITLE: 'TEST RUN SUCCESSFULLY!! :white_check_mark:'
           SLACK_USERNAME: SUCCESS - REGRESSIVE TESTS
 
       - name: Send Slack notification - Failure
@@ -48,7 +48,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
           SLACK_CHANNEL: pw-automation-tests
           SLACK_COLLOR: ${{ job.status }}
-          SLACK_ICON: https://www.imagensempng.com.br/wp-content/uploads/2021/03/Vermelho-x-ilustracao-Erro-Png-1024x1024.png
+          SLACK_ICON: https://www.imagensempng.com.br/wp-content/uploads/2021/03/Vermelho-x-ilustracao-Erro-Png-1024x1024.png?size=48
           SLACK_MESSAGE: 'FAIL! :fire:'
-          SLACK_TITLE: 'SOMETHING WENT WRONG! :fire:'
+          SLACK_TITLE: 'SOMETHING WENT WRONG!! :fire:'
           SLACK_USERNAME: FAIL - REGRESSIVE TESTS      
