@@ -25,25 +25,25 @@ jobs:
           retention-days: 30
 
       - name: Send Slack notification - Success
-      uses: rtCamp/action-slack-notify@v2
-      if: ${{ success() }}
-      env:
-        SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
-        SLACK_CHANNEL: pw-automation-tests
-        SLACK_COLLOR: ${{ job.status }}
-        SLACK_ICON: https://w7.pngwing.com/pngs/442/715/png-transparent-check-mark-computer-icons-icon-design-cheque-successful-angle-logo-grass.png
-        SLACK_MESSAGE: 'TEST RUN SUCCESSFULLY! :white_check_mark:'
-        SLACK_TITLE: 'TEST RUN SUCCESSFULLY! :white_check_mark:'
-        SLACK_USERNAME: SUCCESS
+        - uses: rtCamp/action-slack-notify@v2
+          if: ${{ success() }}
+          env:
+            SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
+            SLACK_CHANNEL: pw-automation-tests
+            SLACK_COLLOR: ${{ job.status }}
+            SLACK_ICON: https://w7.pngwing.com/pngs/442/715/png-transparent-check-mark-computer-icons-icon-design-cheque-successful-angle-logo-grass.png
+            SLACK_MESSAGE: 'TEST RUN SUCCESSFULLY! :white_check_mark:'
+            SLACK_TITLE: 'TEST RUN SUCCESSFULLY! :white_check_mark:'
+            SLACK_USERNAME: SUCCESS
 
       - name: Send Slack notification - Failure
-      uses: rtCamp/action-slack-notify@v2
-      if: ${{ failure() }}
-      env:
-        SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
-        SLACK_CHANNEL: pw-automation-tests
-        SLACK_COLLOR: ${{ job.status }}
-        SLACK_ICON: https://www.imagensempng.com.br/wp-content/uploads/2021/03/Vermelho-x-ilustracao-Erro-Png-1024x1024.png
-        SLACK_MESSAGE: 'TEST RUN FAILED! :fire:'
-        SLACK_TITLE: 'TEST RUN FAILED! :fire:'
-        SLACK_USERNAME: ERROR      
+        - uses: rtCamp/action-slack-notify@v2
+          if: ${{ failure() }}
+          env:
+            SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
+            SLACK_CHANNEL: pw-automation-tests
+            SLACK_COLLOR: ${{ job.status }}
+            SLACK_ICON: https://www.imagensempng.com.br/wp-content/uploads/2021/03/Vermelho-x-ilustracao-Erro-Png-1024x1024.png
+            SLACK_MESSAGE: 'TEST RUN FAILED! :fire:'
+            SLACK_TITLE: 'TEST RUN FAILED! :fire:'
+            SLACK_USERNAME: ERROR      
