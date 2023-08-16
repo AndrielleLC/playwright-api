@@ -25,14 +25,7 @@ export default defineConfig({
   reporter: [
     ["line"], 
     ["allure-playwright"], 
-    ["html"], 
-    [
-      "./node_modules/playwright-slack-report/dist/src/SlackReporter.js",
-      {
-        channels: ["pw-automation-tests"], // provide one or more Slack channels
-        sendResults: "always", // "always" , "on-failure", "off"
-      },
-    ],
+    ["html"]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
