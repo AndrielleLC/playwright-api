@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "playwright": "^1.36.2"
+    "playwright": "^1.36.2",
+    "playwright-slack-report": "^1.1.21"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
