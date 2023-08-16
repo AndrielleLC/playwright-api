@@ -35,7 +35,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
           SLACK_CHANNEL: pw-automation-tests
-          SLACK_COLLOR: ${{ job.status }}
+          SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/148/148767.png?size=48
           SLACK_MESSAGE: 'SUCCESS! :white_check_mark:'
           SLACK_TITLE: 'TEST RUN SUCCESSFULLY! :white_check_mark:'
@@ -47,7 +47,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
           SLACK_CHANNEL: pw-automation-tests
-          SLACK_COLOR: "#F54242"
+          SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/148/148766.png?size=48
           SLACK_MESSAGE: 'FAIL! :fire:'
           SLACK_TITLE: 'SOMETHING WENT WRONG! :fire:'
