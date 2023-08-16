@@ -47,7 +47,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.PW_SECRET_SLACK_WEBHOOK }}
           SLACK_CHANNEL: pw-automation-tests
-          SLACK_COLLOR: #FF0000
+          SLACK_COLLOR: '#FF0000'
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/148/148766.png?size=48
           SLACK_MESSAGE: 'FAIL! :fire:'
           SLACK_TITLE: 'SOMETHING WENT WRONG! :fire:'
