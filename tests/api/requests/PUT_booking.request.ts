@@ -8,10 +8,10 @@ interface IPutRequest {
     request: APIRequestContext;
 }
 
-// const randomAdditionalNeeds = faker.word.sample();
+const randomAdditionalNeeds = faker.word.sample();
 const updatedBookingData = {
     ...bookingUpdate,
-    additionalneeds: faker.word.sample()
+    additionalneeds: randomAdditionalNeeds
 };
 
 export async function putRequest({request}: IPutRequest){

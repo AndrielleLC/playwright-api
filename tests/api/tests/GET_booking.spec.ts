@@ -1,30 +1,27 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
-import { getRequest, getRequest1, getRequestParam } from '../requests/GET_booking.request';
+import { getAllBookings, getSpecificBooking, getBookingParam } from '../requests/GET_booking.request';
 
 test.describe.parallel("API TESTING - GET", () => {
-test('Should be get all the booking details', async ({ request }) => {
-    const response = await getRequest({ request });
-    //console.log(await response.json());
+test('Should get all booking details', async ({ request }) => {
+    const response = await getAllBookings({ request });
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
 });
 
-test('Should be get specific booking details', async ({ request }) => {
-    const response = await getRequest1({ request });
+test('Should get a specific booking details', async ({ request }) => {
+    const response = await getSpecificBooking({ request });
     //const responseJson = await response.json();
-    //console.log(await response.json());
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200); 
-    //expect(responseJson.firstname).toBe('James'); 
+    //expect(responseJson.firstname).toBe('Susan'); //The database is rotating. The return can be different every time it is restarted.
 });
 
-test('should be able to get subset of booking details using query parameters', async ({ request }) => {
-    const response = await getRequestParam({request})
+test('Should get a booking details using query parameters', async ({ request }) => {
+    const response = await getBookingParam({request})
     //const responseJson = await response.json();
-    //console.log(await response.json());
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
-    //expect(responseJson[0].bookingid).toBe(2);     
+    //expect(responseJson[0].bookingid).toBe(2); //The database is rotating. The return can be different every time it is restarted.   
     });
 });
