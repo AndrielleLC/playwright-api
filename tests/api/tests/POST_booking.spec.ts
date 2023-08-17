@@ -11,7 +11,6 @@ test.describe.parallel("API TESTING - POST", () => {
   test("STATIC - Should be able to create a booking", async ({ request }) => {
     const response = await postStaticRequest({ request });
     const responseJson = await response.json();
-    console.log(responseJson)
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
     expect(responseJson.booking).toHaveProperty("firstname", "Jim");
@@ -23,10 +22,8 @@ test.describe.parallel("API TESTING - POST", () => {
   test("DINAMIC - Should be able to create a booking", async ({ request }) => {
     const response = await postDinamicRequest({ request });
     const responseJson = await response.json();
-
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
-
     expect(responseJson.booking).toHaveProperty("firstname", randomFirstName);
     expect(responseJson.booking).toHaveProperty("lastname", randomLastName);
   });

@@ -5,7 +5,7 @@ interface IGetRequest {
   request: APIRequestContext;
 }
 
- function getRequest({ request }: IGetRequest) {
+ function getAllBookings({ request }: IGetRequest) {
   return request.get(`/booking`);
 }
 
@@ -13,7 +13,7 @@ interface IGetRequest1 {
     request: APIRequestContext;
   }
   
-function getRequest1({ request }: IGetRequest1) {
+function getSpecificBooking({ request }: IGetRequest1) {
     return request.get(`/booking/2`);
   }
 
@@ -21,10 +21,10 @@ function getRequest1({ request }: IGetRequest1) {
     request: APIRequestContext;
   }
   
-function getRequestParam({ request }: IGetRequestParam) {
+function getBookingParam({ request }: IGetRequestParam) {
     return request.get(`/booking`,{
         params: bookingGet,
     });
   }
 
-  export{getRequest, getRequest1, getRequestParam};
+  export{getAllBookings, getSpecificBooking, getBookingParam};
