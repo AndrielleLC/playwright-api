@@ -11,7 +11,7 @@ interface IPutRequest {
 const randomAdditionalNeeds = faker.word.sample();
 const updatedBookingData = {
     ...bookingUpdate,
-    additionalneeds: randomAdditionalNeeds,
+    additionalneeds: randomAdditionalNeeds
 };
 
 export async function putRequest({request}: IPutRequest){
