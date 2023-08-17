@@ -13,11 +13,8 @@ test.describe.parallel("API TESTING - PUT", () =>{
         // PUT
         const response = await putRequest ({request});
         const putResponseBody = await response.json()
-        //const responseJson = await response.json();
-        console.log(putResponseBody);
         expect(response.ok()).toBeTruthy();
         expect(response.status()).toBe(200);
-
         expect(putResponseBody).toHaveProperty("firstname", "Jim");
         expect(putResponseBody).toHaveProperty("lastname", "Brown");
         expect(putResponseBody).toHaveProperty("totalprice", 111);
